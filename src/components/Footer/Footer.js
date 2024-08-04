@@ -1,16 +1,24 @@
 import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-buttons">
-          <button className="footer-button">Become a Fellow</button>
-          <button className="footer-button">Become a Volunteer</button>
-          <button className="footer-button">Become a Partner</button>
+          <Link to="/fellow">
+            <button className="footer-button">Become a Fellow</button>
+          </Link>
+          <Link to="/">
+            <button className="footer-button">Become a Volunteer</button>
+          </Link>
+          <Link to="/">
+            <button className="footer-button">Become a Partner</button>
+          </Link>
         </div>
       </div>
       <div className="footer-bottom">
