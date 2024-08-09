@@ -73,18 +73,18 @@ span{
 span:hover{
     text-decoration: underline;
 }
-/* Homepage.css */
+
 .fade-in {
     opacity: 1;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in;
 }
 
 .fade-out {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-out;
 }
 
-/* Add other necessary styles */
+
 
 
 @media (max-width: 1200px){

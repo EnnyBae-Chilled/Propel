@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Fellow.css';
+import './Volunteer.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -9,17 +9,14 @@ import mentor from '../assets/images/mentor.svg';
 import linkedin from '../assets/images/linkedin (2).svg';
 import interview from '../assets/images/interview.svg';
 import decision from '../assets/images/tick.svg';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import QuestionOverlay from '../Pages/QuestionOverlay.js';
 
-const Fellow = () => {
+const Volunteer = () => {
     const [isOverlayVisible, setIsOverlayVisible] = useState(false);
     const [userType, setUserType] = useState(null);
 
     const showOverlay = () => setIsOverlayVisible(true);
     const hideOverlay = () => setIsOverlayVisible(false);
-
-
 
 
     const calculateTimeLeft = () => {
@@ -58,120 +55,92 @@ const Fellow = () => {
         return () => clearInterval(timer);
     }, []);
 
-    // Use Intersection Observer for each section
-    const heroSectionRef = React.useRef(null);
-    const aboutSectionRef = React.useRef(null);
-    const programSectionRef = React.useRef(null);
-    const requirementsSectionRef = React.useRef(null);
-    const applicationSectionRef = React.useRef(null);
-    const readySectionRef = React.useRef(null);
-
-    const isHeroVisible = useIntersectionObserver({ target: '.heroSection-text', threshold: 0.1 });
-    const isAboutVisible = useIntersectionObserver({ target: '.about-text1', threshold: 0.1 });
-    const isProgramVisible = useIntersectionObserver({ target: '.program-title', threshold: 0.1 });
-    const isRequirementsVisible = useIntersectionObserver({ target: '.requirements-section', threshold: 0.1 });
-    const isApplicationVisible = useIntersectionObserver({ target: '.steps-container', threshold: 0.1 });
-    const isReadyVisible = useIntersectionObserver({ target: '.ready', threshold: 0.1 });
-
-    return (
-        <div className="fellow">
-            <div className='content1'>
-                <h1 className="heroSection-text">Become A Fellow</h1>
+    return(
+        <div className="volunteer">
+            <div className="content2">
+                <div className="heroSection-text">
+                    <h1>Become A Volunteer</h1>
+                </div>
             </div>
-            <div className='about1'>
-                <p className="about-text1">
-                    The Propel2Excel fellowship runs two cohorts per year in the Spring and Fall Semesters.
-                    The program is completely virtual and fellows are paired with mentors from top tech, banking, and consulting companies based on their career paths.
+            <div className="about2">
+                <p className='about-text2'> 
+                    At Propel2Excel, each fellow is uniquely positioned to work with personalized mentors in their chosen field. 
+                    With access to over 50 mentors from diverse industries and universities, all members can expand their networks 
+                    and gain exposure to a wide array of perspectives and experiences. <br></br>
+                    The mentor-fellow relationship is a cornerstone of the Propel2Excel experience, 
+                    playing a crucial role in helping fellows achieve their goals and succeed in their selected fields.
                 </p>
             </div>
-            <div className='program'>
-                <h1 className="program-title">The Program</h1>
-                <p className="program-subtitle">Why Join Propel2Excel?</p>
-                <div className="program-cards">
-                    <div className={`card`}>
-                        <div className="icon">
+            <div className='program2'>
+                <h1 className="program-title2">The Program</h1>
+                <p className="program-subtitle2">Why Join Propel2Excel?</p>
+                <div className="program-cards2">
+                    <div className={`card2`}>
+                        <div className="icon2">
                             <img src={mic} width={30} alt="mic icon" />
                         </div>
                         <h3>Speaker Series</h3>
                         <p>
-                            Speaker Series lectures are delivered by industry professionals in tech,
-                            banking, and consulting companies. These events hosted by P2E provide insight into multiple perspectives
-                            gained from years of experience. As a fellow, you would have the opportunity to connect with these professionals.
+                            As industry professionals in tech, banking, and consulting companies, 
+                            you will deliver Speaker Series lectures hosted by P2E. 
+                            These events allows you to share insights and perspectives gained from years of experience. 
+                            By volunteering, you have the opportunity to connect with and groom talented individuals.
                         </p>
                     </div>
-                    <div className={`card`}>
-                        <div className="icon">
+                    <div className={`card2`}>
+                        <div className="icon2">
                             <img src={mentor} width={30} alt="mentor icon" />
                         </div>
                         <h3>Mentorship</h3>
                         <p>
-                            As a fellow, you would be paired with a corporate leader in your chosen career field who would be your mentor.
-                            Your mentor will provide career guidance and help you in every step of your application journey.
+                            As a volunteer, you would be paired with a talented P2E fellow in your career field who would be your mentee.
+                            As a mentor, you will provide career guidance and help your mentee in every step of their application journey.
                         </p>
                     </div>
-                    <div className={`card`}>
-                        <div className="icon">
+                    <div className={`card2`}>
+                        <div className="icon2">
                             <img src={linkedin} width={30} alt="linkedin icon" />
                         </div>
                         <h3>LinkedIn Rebrand</h3>
                         <p>
-                            As a fellow, your LinkedIn profile and resume would be optimized by experts with over 10 years of experience.
+                            As a mentor, you would share your insights on having a good LinkedIn profile and resume.
                         </p>
                     </div>
                 </div>
             </div>
-            <div className='fellowship-requirements'>
-                <h1>Fellowship Requirements</h1>
-                <div className="requirements-section">
-                    <h2>Academic Requirements</h2>
+            <div className='fellowship-requirements2'>
+                <h1>Volunteer Requirements</h1>
+                <div className="requirements-section2">
+                    <h2>Successful mentors should..</h2>
                     <ul>
-                        <li>Good Academic Standing: A GPA of 3.3 and above.</li>
-                        <li>Special Projects: Participation in significant academic projects.</li>
-                        <li>Awards and Achievements: Recognition such as the Dr. Martin Luther King Jr. Award.</li>
+                        <h3>Academics</h3>
+                        <li>At least have a Bachelors Degree in either the tech, banking, or consulting fields.</li>
+                        <h3>Relevant Industry Experience</h3>
+                        <li>
+                            Mentors should have a robust background and a demonstrated history of success in their field, 
+                            coupled with a comprehensive understanding of the industry landscape and current trends.
+                        </li>
+                        <h3>Adaptability and Open-Mindedness</h3>
+                        <li>
+                            Mentors should be adaptable and open-minded, 
+                            capable of working effectively with individuals from diverse backgrounds 
+                            and varying skill sets and experiences.
+                        </li>
+                        <h3>Availability and Commitment</h3>
+                        <li>
+                            Mentors should be available and committed to meeting with their mentees regularly, 
+                            dedicating the time and energy required to cultivate a strong and supportive mentor-mentee relationship.
+                        </li>
+                        <h3>Passion for Mentorship</h3>
+                        <li>
+                            Mentors should be passionate about helping others achieve their goals and dedicated to supporting and empowering 
+                            their mentees to reach their full potential.
+                        </li>
                     </ul>
                 </div>
-
-                <div className="requirements-section">
-                    <h2>Professional Requirements</h2>
-                    <ul>
-                        <li>Leadership Positions: Preferred positions in clubs, sports, or projects.</li>
-                        <li>Internship Experience: Experience in top tech, consulting, or banking companies.</li>
-                        <li>Business Certifications: Certifications such as CFA, CPA, or other relevant qualifications.</li>
-                    </ul>
-                </div>
-            </div>
-            <div className={`fellowship-application`} ref={applicationSectionRef}>
-                <h1>How to become a fellow?</h1>
-                <div className="steps-container">
-                    <div className={`step`}>
-                        <div className="icon">
-                            <img src={apply} width={250} alt="apply icon" />
-                        </div>
-                        <p>Submit an online application</p>
-                    </div>
-
-                    <div className={`step`}>
-                        <div className="icon">
-                            <img src={interview} alt="interview icon" />
-                        </div>
-                        <p>Schedule an interview</p>
-                    </div>
-
-                    <div className={`step`}>
-                        <div className="icon">
-                            <img src={decision} alt="decision icon" />
-                        </div>
-                        <p>Receive a decision via email.</p>
-                    </div>
-                </div>
-
-                <p className="contact-info">
-                    In case of any queries, please write to us at{' '}
-                    <a href="mailto:Propel@propel2excel.com">Propel@propel2excel.com</a>
-                </p>
             </div>
             <div className="ready">
-                <h1>Ready to become a Fellow?</h1>
+                <h1>Interested in becoming a Volunteer?</h1>
                 <h4>October Cohort Applications closes in:</h4>
                 <div className="application-countdown countdown">
                     <div className="time-section">
@@ -197,10 +166,10 @@ const Fellow = () => {
                     <div className=''>
                         <button className="footer-button1" onClick={showOverlay}>Apply Now</button>
                     </div>
-                    <h2>Not a Student?</h2>
+                    <h2>Not a Volunteer?</h2>
                     <div className="footer-buttons1">
-                        <Link to="/volunteer">
-                            <button className="footer-button1">Become a Volunteer</button>
+                        <Link to="/fellow">
+                            <button className="footer-button1">Become a Fellow</button>
                         </Link>
                         <Link to="/partners">
                             <button className="footer-button1">Become a Partner</button>
@@ -234,7 +203,7 @@ const Fellow = () => {
             />
             )}
         </div>
-    );
-};
+    )
+}
 
-export default Fellow;
+export default Volunteer;

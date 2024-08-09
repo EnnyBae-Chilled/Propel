@@ -83,9 +83,9 @@
 }
 
 .icon {
-    width: 100px; /* Adjust width if necessary */
-    height: 100px; /* Adjust height if necessary */
-    border-radius: 50%; /* This makes the icon background circular */
+    width: 100px; 
+    height: 100px; 
+    border-radius: 30%;  
     background-color: #1a73e8;
     margin-bottom: 20px;
     display: flex;
@@ -318,13 +318,9 @@
 
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+    animation: fadeIn 1s ease-in;
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-}
 
 .fellow :is(.fade-in):nth-child(odd) {
     animation-delay: 0.1s;
@@ -426,7 +422,7 @@
 }
 @media (max-width: 1200px){
     .footer1{
-        height: 56vh;
+        height: 60vh;
     }
 
     .footer-bottom1{
@@ -437,5 +433,124 @@
     .footer-social1{
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content1 {
+        /* padding: 20px;
+        height: auto; */
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        height: 78vh;
+    }
+
+    .heroSection-text {
+        max-width: 30%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .content1 h1 {
+        font-size: 2rem;
+    }
+
+    .about1 {
+        flex-direction: column;
+        margin-top: 40px;
+        height: auto;
+    }
+
+    .about-text1 {
+        max-width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .program-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .fellowship-requirements {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .fellowship-requirements h1 {
+        font-size: 1.8em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .requirements-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .requirements-section ul {
+        padding: 15px;
+    }
+
+    .requirements-section li {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Smaller devices (mobile, smaller tablets) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .fellowship-requirements h1 {
+        font-size: 1.5em;
+    }
+
+    .requirements-section h2 {
+        font-size: 1.3em;
+    }
+
+    .requirements-section li {
+        font-size: 12px;
     }
 }

@@ -9,6 +9,7 @@ import Footer from '../components/Footer/Footer';
 import p2e from '../assets/images/image.png';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
+
 const Homepage = () => {
   const contentRef = useRef(null);
   const aboutRef = useRef(null);
@@ -26,13 +27,13 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <div className={`content ${isContentVisible ? 'fade-in' : ''}`} ref={contentRef}>
+      <div className={`content`}>
         <h1 className='banner-text'>
           <img src={p2e} width={150} alt="P2E" />
           places underrepresented talent at top tech, consulting, and banking companies
         </h1>
       </div>
-      <div className={`about ${isAboutVisible ? 'fade-in' : ''}`} ref={aboutRef}>
+      <div className={`about`}>
         <div className='image-container1'>
           <img src={photocollage} width={700} alt="Photo Collage" />
         </div>
@@ -45,16 +46,16 @@ const Homepage = () => {
           </h3>
         </div>
       </div>
-      <section className={`key-components ${isProgramComponentsVisible ? 'fade-in' : ''}`} ref={programComponentsRef}>
+      <section className={`key-components`}>
         <ProgramComponents />
       </section>
-      <section className={`student-placement ${isStudentPlacementVisible ? 'fade-in' : ''}`} ref={studentPlacementRef}>
+      <section className={`student-placement`}>
         <StudentPlacement />
       </section>
-      <section className={`event ${isEventsSectionVisible ? 'fade-in' : ''}`} ref={eventsSectionRef}>
+      <section className={`event`}>
         <EventsSection />
       </section>
-      <section className={`companies-section ${isCompaniesSectionVisible ? 'fade-in' : ''}`} ref={companiesSectionRef}>
+      <section className={`companies-section`}>
         <CompaniesSection />
       </section>
       <section>
