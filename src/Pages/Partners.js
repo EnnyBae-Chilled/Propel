@@ -10,6 +10,10 @@ import talent from '../assets/images/talent.svg';
 import corporate from '../assets/images/corporate.svg';
 import { PieChart, Pie, Tooltip, Cell, Legend } from 'recharts';
 import logo from '../assets/images/Logo-P2e-final-v1Asset 12.c5f9e3075a4365128160.png'
+import future from '../assets/images/future.svg';
+import community from '../assets/images/community.svg';
+import workforce from '../assets/images/workforce.svg';
+import networking from '../assets/images/networking.svg';
 
 const testimonials = [
   { name: 'IB Associate @ BOA', testimonial: 'I am incredibly grateful for this program and I know if other students had this opportunity they\'d feel the same way. I wish Propel2Excel existed sooner, I have already gotten so much value from it in my first financial state of the program like P2E extends to all. It has raised my competencies as well.' },
@@ -76,7 +80,7 @@ const Partners = () => {
             <div className="content3">
                 <div className="heroSection-text3">
                     <h1>Become A Partner</h1>
-                    <p>Invest in the Future with <img src={logo} width={150}></img></p>
+                    <p>Invest in the Future with <img src={logo} width={200}></img></p>
                 </div>
             </div>
             <div className='about3'>
@@ -92,7 +96,7 @@ const Partners = () => {
                     <div className="program-cards3">
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={talent} width={30} alt="mic icon" />
+                                <img src={talent} width={60} alt="" />
                             </div>
                             <h3>Access to Top Talent</h3>
                             <p>
@@ -102,7 +106,7 @@ const Partners = () => {
                         </div>
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={corporate} width={30} alt="mentor icon" />
+                                <img src={corporate} width={60} alt="" />
                             </div>
                             <h3>Enhanced Corporate Image</h3>
                             <p>
@@ -112,7 +116,7 @@ const Partners = () => {
                         </div>
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={linkedin} width={30} alt="linkedin icon" />
+                                <img src={future} width={60} alt="" />
                             </div>
                             <h3>Building Future Leaders</h3>
                             <p>By supporting our program, you are helping to cultivate the next generation of leaders
@@ -120,21 +124,21 @@ const Partners = () => {
                         </div>
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={linkedin} width={30} alt="linkedin icon" />
+                                <img src={workforce} width={60} alt="" />
                             </div>
                             <h3>Diverse Workforce</h3>
                             <p>Our program emphasizes diversity and inclusion, providing companies with access to a diverse talent pool that can bring fresh perspectives and innovative solutions to your business.</p>
                         </div>
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={linkedin} width={30} alt="linkedin icon" />
+                                <img src={networking} width={60} alt="" />
                             </div>
                             <h3>Networking Opportunities</h3>
                             <p>Engaging with Propel2Excel offers numerous networking opportunities with industry leaders, professionals, and other corporate partners.</p>
                         </div>
                         <div className={`card3`}>
                             <div className="icon3">
-                                <img src={linkedin} width={30} alt="linkedin icon" />
+                                <img src={community} width={60} alt="" />
                             </div>
                             <h3>Community Impact</h3>
                             <p>Your investment helps create a lasting positive impact on communities by providing students with the resources and support they need to succeed.</p>
